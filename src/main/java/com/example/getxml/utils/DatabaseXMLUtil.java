@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class DatabaseUtilTest {
+public class DatabaseXMLUtil {
     /**
      * 连接数据库的路径
      */
