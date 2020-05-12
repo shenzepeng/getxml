@@ -1,11 +1,13 @@
 package com.example.getxml.context;
 
-import lombok.Data;
+
+import lombok.AllArgsConstructor;
 
 /**
  * 逆向生成xml的header
  */
-@Data
+
+@AllArgsConstructor
 public class GenHeaderContent {
     private String jdbcLocationJarPath;
     private String commonMapper;
@@ -88,26 +90,26 @@ public class GenHeaderContent {
                 "            <!--\n" +
                 "                  为生成的接口添加父接口\n" +
                 "             -->\n" +
-                "        </javaClientGenerator>";
+                "        </javaClientGenerator>" + "\n";
             return content;
     }
 
+//    public GenHeaderContent(String jdbcLocationJarPath, String commonMapper, String jdbcDriver, String jdbcConnectionURL, String mysqlUserName, String mysqlPassword, String pojoPath, String mapperPath) {
+//        this.jdbcLocationJarPath = jdbcLocationJarPath;
+//        this.commonMapper = commonMapper;
+//        this.jdbcDriver = jdbcDriver;
+//        this.jdbcConnectionURL = jdbcConnectionURL;
+//        this.mysqlUserName = mysqlUserName;
+//        this.mysqlPassword = mysqlPassword;
+//        this.pojoPath = pojoPath;
+//        this.mapperPath = mapperPath;
+//    }
 
 
-    public static void main(String[] args) {
-        GenHeaderContent headerContent=new GenHeaderContent("fuck","fuck","fuck","fuck","fuck","fuck","fuck","fuck");
-        System.out.println(headerContent.getHeaderContent());
-        System.out.println(headerContent.jdbcLocationJarPath);
-    }
+//    public static void main(String[] args) {
+//        GenHeaderContent headerContent=new GenHeaderContent("fuck","fuck","fuck","fuck","fuck","fuck","fuck","fuck");
+//        System.out.println(headerContent.getHeaderContent());
+//        System.out.println(headerContent.jdbcLocationJarPath);
+//    }
 
-    public GenHeaderContent(String jdbcLocationJarPath, String commonMapper, String jdbcDriver, String jdbcConnectionURL, String mysqlUserName, String mysqlPassword, String pojoPath, String mapperPath) {
-        this.jdbcLocationJarPath = jdbcLocationJarPath;
-        this.commonMapper = commonMapper;
-        this.jdbcDriver = jdbcDriver;
-        this.jdbcConnectionURL = jdbcConnectionURL;
-        this.mysqlUserName = mysqlUserName;
-        this.mysqlPassword = mysqlPassword;
-        this.pojoPath = pojoPath;
-        this.mapperPath = mapperPath;
-    }
 }
