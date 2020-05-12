@@ -1,5 +1,8 @@
-package com.example.getxml.constants;
+package com.example.getxml.context;
 
+/**
+ * 逆向生成的xml内容
+ */
 public class MybatisXmlConstant {
     /**
      * tableName 表名
