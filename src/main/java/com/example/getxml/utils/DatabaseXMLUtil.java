@@ -20,7 +20,7 @@ public class DatabaseXMLUtil {
     /**
      * 数据连接
      */
-    private final static String url = "jdbc:mysql://101.132.33.149:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+    private final static String url = "jdbc:mysql://101.132.33.149:3306/saas_shop?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
     /**
      * 账号
      */
@@ -30,13 +30,13 @@ public class DatabaseXMLUtil {
      */
     private final static String password = "123456";
 
-    private final static String mapperUrl="com.kxgsaastest.kxgsaastest.provider.mapper";
+    private final static String mapperUrl="com.kxg.cremb.provider.mapper";
 
     private final static String localJdbcJar="/Users/mac/.m2/repository/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar";
 
-    private final static String commonMapper="com.kxgsaastest.kxgsaastest.provider.mapper.CommonMapper";
+    private final static String commonMapper="com.kxg.cremb.provider.mapper.CommonMapper";
 
-    private final static String pojoUrl="com.kxgsaastest.kxgsaastest.provider.pojo";
+    private final static String pojoUrl="com.kxg.cremb.provider.pojo";
     public static Map getAllTableColumn(String driver, String url, String username, String password) throws SQLException, ClassNotFoundException {
 
         Map<String, Object> tableNameMap = new HashMap<>();
@@ -115,7 +115,7 @@ public class DatabaseXMLUtil {
              * 但是不方便开发
              * 需更换为自己想要的
              */
-            String newClassName = pojoClassName.replace("ZjhjBd", "Kxg");
+            String newClassName = pojoClassName.replace("Eb", "Kxg");
 
             String xml = String.format(rule, tableName, SnackToHumpStringUtils.underlineToCamel(newClassName));
             xmlList.append(xml);
